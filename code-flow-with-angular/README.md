@@ -14,6 +14,8 @@ Requirements:
 
 To run this sample application simply type `quarkus dev` or `mvn clean quarkus:dev`.
 
+Access the application via http://localhost:8080/.
+
 # run with google as oidc provider
 
 You can run this sample application with google as oidc provider. Configure this properties to do so:
