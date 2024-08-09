@@ -14,7 +14,7 @@ Requirements:
 
 To run this sample application simply type `quarkus dev` or `mvn clean quarkus:dev`.
 
-Access the application via http://localhost:8080/ and login with gepard/gepard.
+Access the application via http://localhost:8080/ and login with gepard/gepard@123.
 
 # run with google as oidc provider
 
