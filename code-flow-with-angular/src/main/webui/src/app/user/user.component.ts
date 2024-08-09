@@ -1,6 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {toSignal} from "@angular/core/rxjs-interop";
-import {UserService} from "./user.service";
+import {UserResourceService} from "../../generated/user-resource/user-resource.service";
+import {User} from "../../generated/model";
 
 @Component({
   selector: 'app-user',
@@ -11,7 +12,7 @@ import {UserService} from "./user.service";
 })
 export class UserComponent {
 
-  private userService = inject(UserService);
+  private userService = inject(UserResourceService);
 
-  user = toSignal(this.userService.$user);
+  user = toSignal(this.userService.getApiUser<User>());
 }
