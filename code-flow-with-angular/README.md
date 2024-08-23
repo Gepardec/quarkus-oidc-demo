@@ -14,14 +14,13 @@ Requirements:
 
 To run this sample application simply type `quarkus dev` or `mvn clean quarkus:dev`.
 
-Access the application via http://localhost:8080/ and login with gepard/gepard@123.
+Access the application via http://localhost:8080/ and login with alice/alice or bob/bob.
 
-# run with google as oidc provider
+# run with Google as oidc provider
 
-You can run this sample application with google as oidc provider. Configure this properties to do so:
+You can run this sample application with Google as oidc provider. Configure these properties to do so:
 
-- quarkus.oidc.auth-server-url=https://accounts.google.com
+- quarkus.oidc.provider=google
 - quarkus.oidc.client-id=<your client id>
 - quarkus.oidc.credentials.secret=<your secret>
-- quarkus.oidc.authentication.verify-access-token=false
 - quarkus.oidc.logout.path=

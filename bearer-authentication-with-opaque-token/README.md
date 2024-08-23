@@ -13,25 +13,14 @@ Requirements:
 
 To run this sample application simply type `quarkus dev` or `mvn clean quarkus:dev`.
 
-TODO: You have to configure the web origins for oidc client 'oidc-demo' every time you restart. You can find the link to the keycloak admin interface here: http://localhost:8080/q/dev-ui/extensions
+Use the OpenID Connect devui (http://localhost:8080/q/dev-ui/io.quarkus.quarkus-oidc/keycloak-provider) to log in and test the `/api/user` Endpoint.
 
-Access the API via Swagger-UI (http://localhost:8080/q/dev-ui/io.quarkus.quarkus-smallrye-openapi/swagger-ui);
+You can change the config from authorization code flow to client credential flow and repeat testing.
 
-Generate a token using `Authorize`.
-- SecurityScheme (OAuth2, password)
-- username: gepard
-- password: gepard@123
-- client_id: oidc-demo
-- client_secret: my-secret-client-secret
-- scope: openid
+# run with Google as oidc provider
 
-Test `/api/secured` Endpoint.
+You can run this sample application with Google as oidc provider. Configure these properties to do so:
 
-# run with google as oidc provider
-
-You can run this sample application with google as oidc provider. Configure this properties to do so:
-
-- quarkus.oidc.auth-server-url=https://accounts.google.com
+- quarkus.oidc.provider=google
 - quarkus.oidc.client-id=<your client id>
 - quarkus.oidc.credentials.secret=<your secret>
-- quarkus.oidc.token.verify-access-token-with-user-info=true
